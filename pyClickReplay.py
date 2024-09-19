@@ -15,9 +15,10 @@ def replay_clicks(clicks, repeat=5, delay=0.1):
             button = Button.left if 'Button.left' in click['button'] else Button.right
             mouse.position = (x, y)
             mouse.click(button)
-            time.sleep(delay)  # Add a delay between clicks if needed
+            time.sleep(delay)  # Delay between each click
 
 if __name__ == "__main__":
     clicks = load_clicks()
     repeat_count = int(input("How many times should the clicks be repeated? "))
-    replay_clicks(clicks, repeat=repeat_count)
+    click_delay = float(input("Set the delay between clicks (in seconds): "))
+    replay_clicks(clicks, repeat=repeat_count, delay=click_delay)
