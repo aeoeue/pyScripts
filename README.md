@@ -1,1 +1,1 @@
-Useful pyscripts for me
+Collection of useful pyscripts
